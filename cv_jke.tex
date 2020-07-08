@@ -1,0 +1,536 @@
+\documentclass[letterpaper, 10pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[usenames]{color}
+\usepackage{marvosym}
+\usepackage{multicol}
+\usepackage{parcolumns}
+\usepackage[strict]{changepage}
+
+% \usepackage[left=0.2in, right=0.2in, bottom=1.25in, top=1.25in]{geometry}
+
+\usepackage{setspace}
+\usepackage{hyperref}
+
+% \setlength{\tabcolsep}{0in}
+\usepackage{tabularx}
+
+\leftmargin=0.25in
+\oddsidemargin=0.25in
+\textwidth=6.0in
+\topmargin=-0.5in
+\textheight=9.25in
+
+\raggedright
+
+\pagenumbering{arabic}
+% \thispagestyle{empty}
+
+\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+% DEFINITIONS FOR RESUME
+
+\newenvironment{changemargin}[2]{%
+  \begin{list}{}{%
+      \setlength{\topsep}{0pt}%
+      \setlength{\leftmargin}{#1}%
+      \setlength{\rightmargin}{#2}%
+      \setlength{\listparindent}{\parindent}%
+      \setlength{\itemindent}{\parindent}%
+      \setlength{\parsep}{\parskip}%
+    }%
+  \item[]}{\end{list}
+}
+
+\newcommand{\lineover}{
+  \begin{changemargin}{-0.05in}{-0.05in}
+    \vspace*{-8pt}
+    \hrulefill \\
+    \vspace*{-2pt}
+  \end{changemargin}
+}
+
+\newcommand{\header}[1]{
+  \begin{changemargin}{-0.5in}{-0.5in}
+    \textbf{\scshape{#1}}\\
+    \lineover
+  \end{changemargin}
+}
+
+\newcommand{\contact}[3]{
+  \begin{changemargin}{-0.5in}{-0.5in}
+    \begin{center}
+      {\LARGE \textbf {#1}} % \\ \smallskip
+      % {#2}\\ \smallskip
+      % {#3}\smallskip
+    \end{center}
+  \end{changemargin}
+}
+
+\newenvironment{body} {
+  \vspace*{-16pt}
+  \begin{changemargin}{-0.25in}{-0.5in}
+  }
+  {\end{changemargin}
+}
+
+\newcommand{\school}[4]{
+  \textbf{#1} \hfill \emph{#2\\}
+  #3\\
+  #4\\
+}
+
+% for I and II, etc.
+\newcommand{\rom}[1]{\uppercase\expandafter{\romannumeral #1\relax}}
+
+% consistent with R manual
+\newcommand{\pkg}[1]{{\normalfont\fontseries{b}\selectfont #1}}
+\let\proglang=\textsf
+\let\code=\texttt
+
+
+% END RESUME DEFINITIONS
+
+
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Name
+\begin{center}
+  {\huge \textbf {Junhao Ke}}
+\end{center}
+
+% \begin{changemargin}{-0.1in}{-0.1in}
+\begin{parcolumns}[]{2}
+  \colchunk[1]{%
+    \begin{adjustwidth}{-0.8in}{}
+    \begin{itemize}
+	\item[\Email] \href{mailto:junhao.ke@sydney.edu.au}{junhao.ke@sydney.edu.au}
+    \item[\Mobilefone] (+61)~0~451~559~391	
+    \item[] Faculty of Engineering and Information Technology
+    \item[] The University of Sydney	
+    \item[] New South Wales 2006
+    \end{itemize}
+  \end{adjustwidth}
+  }
+  \colchunk[2]{%
+    \begin{adjustwidth}{1.8in}{-2in}
+    \begin{itemize}
+%    \item[] 0451559391
+%    \item[] \href{mailto:junhao.ke@sydney.edu.au}{junhao.ke@sydney.edu.au}
+%    \item[] \href{https://wenjie-stat.me}{https://wenjie-stat.me}
+    \end{itemize}
+  \end{adjustwidth}
+  }
+
+\end{parcolumns}
+% \end{changemargin}
+\medskip
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Objective
+% \header{Objective}
+
+% \begin{body}
+%   \vspace{14pt}
+%   \textbf{Data Processing and Analysis Assistant}
+% \end{body}
+%
+% \smallskip
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Education
+\header{Education}
+\begin{body}
+  \vspace{14pt}
+  \textbf{The University of Sydney} \hfill{NSW, Australia}\\
+  \smallskip
+  Doctor of Philosophy \hfill \emph{March 2017 -- (Expected) October 2020}\\
+  Advisors: Dr.\ Nicholas Williamson \& Prof.\ Steven Armfield \\
+  \smallskip
+  \textbf{The University of Sydney} \hfill{NSW, Australia}\\
+  \smallskip
+  Master of Professional Engineering \hfill \emph{March 2015 -- December 2017}\\
+  Advisors: Dr.\ Nicholas Williamson \& Prof.\ Steven Armfield \\
+  \smallskip
+  \textbf{East China University of Science and Techonology} \hfill{Shanghai, China}\\
+  \smallskip
+  Bachelor of Engineering \hfill
+  \emph{September 2010 -- July 2014} \\
+  % Thesis: Review and Comparison on Variable Selection Methods\\
+  % Advisor: Dr.\ Yanlin Tang
+  %	\vspace{-4pt}
+  %	\begin{itemize} \itemsep -0pt  % reduce space between items
+  % \item Rank in last two year: Top 3/36
+  %	\end{itemize}
+\end{body}
+\smallskip
+
+
+
+\header{Research Interests}
+Computational Fluid Dynamics, Statistical Computing, Turbulent Data Analysis
+\smallskip
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Publication
+\header{Publications}
+\begin{body}
+  \vspace{14pt}
+
+  \textbf{Ke, J.}, , Williamson, N., Armfield, S. W., McBain, G. D., \& Norris, S. E. (2019). Stability of a temporally evolving natural convection boundary layer on an isothermal wall. \emph{Journal of Fluid Mechanics}, 877, 1163-1185.
+
+  \smallskip
+
+  \textbf{Ke, J.}, Williamson, N., Armfield, S. W., Norris, S. E., \& Kirkpatrick, M. (2018). Direct numerical simulation of a temporally developing natural convection boundary layer on a doubly-infinite isothermal wall, \emph{In Proceedings of IHTC-16. Begell House}. %In 16th International Heat Transfer Conference, Beijing, China, 10-15 August 2018.
+  
+
+\end{body}
+\smallskip
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% paper in preparation (work in progress)
+\header{Work in Progress}
+\begin{body}
+  \vspace{14pt}
+
+  \textbf{Ke, J.}, Williamson, N., Armfield, S. W., Norris, S. E., \& Komiya, A.  (2020). Law of the wall for a temporally evolving vertical natural convection boundary layer. \emph{Journal of Fluid Mechanics}. (Under review)
+
+  \smallskip
+
+  \textbf{Ke, J.}, Williamson, N., Armfield, S. W., Norris, S. E., \& Komiya, A.  Integral modelling of a temporally developing natural convection boundary layer.
+
+  \smallskip
+
+\end{body}
+\smallskip
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Talks
+\header{Talks}
+\begin{body}
+  \vspace{14pt}
+
+  Direct numerical simulation of an unsteady natural convection boundary layer adjacent to a doubly-infinite isothermal wall. In 10th Australasian Natural Convection Workshop, Auckland, New Zealand, 30 November-1 December 2017.
+
+  \smallskip
+
+  Direct numerical simulation of a temporally developing natural convection boundary layer on a doubly-infinite isothermal wall. In 16th International Heat Transfer Conference, Beijing, China, 10-15 August 2018. 
+  
+  \smallskip
+  
+  DNS study of a parallel vertical natural convection boundary layer. In Australia-Japan Fluid Dynamics Workshop, Sydney, Australia, 31 January-1 February 2019.
+  
+  \smallskip
+  
+  DNS of a temporally evolving vertical natural convection boundary layer. In 17th European Turbulence Conference, Torino, Italy, 3-6 September 2019.
+  
+  \smallskip
+  
+  Application of an integral model to an unsteady natural convection boundary layer. In 11th Australasian Natural Convection Workshop, Sydney, Australia, 9-10 December 2019.
+  
+  \smallskip
+  
+  
+
+\end{body}
+\smallskip
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Research Experience
+% \header{Other Research Experience}
+% \begin{body}
+%   \vspace{14pt}
+%   \textbf{B.S. Thesis} \hfill \emph{January, 2014 -- June, 2014}\\
+%   \vspace{-2pt}
+%   \begin{itemize}
+%     \setlength{\itemindent}{0in}
+%     \setlength{\itemsep}{0in}
+%   \item Worked on selective \textbf{review}, \textbf{simulation} and
+%     \textbf{comparison} of several popular \textbf{Variable Selection}
+%     approaches ranging from the classical Hypothesis Testing, Best Subset
+%     and some modern regularization based techniques, such as Nonnegative
+%     Garrote, Lasso, Elastic Net, Adaptive Lasso and SCAD, etc.
+%   \item Advisor: Dr.\ Yanlin Tang
+%   \end{itemize}
+
+%   \textbf{Mathematical Contest in Modeling (MCM)} \hfill \emph{February 2013}\\
+%   \vspace{-2pt}
+%   \begin{itemize}
+%     \setlength{\itemindent}{0in}
+%     \setlength{\itemsep}{0in}
+%   \item Participated in the Mathematical Contest in Modeling (MCM)
+%     organized by the Consortium for Mathematics and Its Applications
+%     (COMAP)
+%   \item Worked on optimization of dilemma of ``The Ultimate Brownie Pan''
+%     with teammates
+%   \item Advisor: Dr.\ Zhijian Qian
+%   \end{itemize}
+
+%   \textbf{National Undergraduate Innovation Program}  \hfill
+%   \emph{December 2010--2012}\\
+%   \vspace{-2pt}
+%   \begin{itemize}
+%     \setlength{\itemindent}{0in}
+%     \setlength{\itemsep}{0in}
+%   \item Participated in the 2010's National Undergraduate Innovation
+%     Program organized by the Ministry of Education of P.R. China
+%   \item Worked on Tensor Transpose and its Properties with teammates
+%   \item Advisor: Dr.\ Junfeng Yin
+%   \end{itemize}
+%   %	\emph {Undergraduate Student}  \hfill  December, 2010 - December, 2012\\
+%   %	\vspace{-4pt}
+%   %	\begin{itemize} \itemsep -0pt
+%   % \item Participated in the 2010\rq{}s National Undergraduate Innovation Program
+%   % \item Worked on Tensor Transpose and its Properties with teammates and Advisor Prof. Junfeng Yin of Tongji University
+%   %	\end{itemize}
+% \end{body}
+% \smallskip
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Professional Associations
+% \header{Professional Associations}
+% \begin{body}
+%   \vspace{14pt}
+%   American Statistical Association, New England Statistical Society
+% \end{body}
+% \smallskip
+
+
+
+
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Honors and Awards
+\header{Honors \& Awards}
+\begin{body}
+	\vspace{14pt}
+	\textbf{Best Student Paper Award}
+	in 10th Australasian Natural Convection Workshop
+	\hfill \emph{2017}\\ \smallskip
+	\textbf{Natural Convection Supplementary Scholarship}, Faculty of Engineering and IT, USyd \hfill
+	\emph{2016}\\ \smallskip
+	\textbf{USyd-IS Strategic Scholarship Award}, 
+	USyd \hfill \emph{2016}\\
+	\smallskip
+	\textbf{Dean's Excellency Award}, Faculty of Engineering and IT, USyd \hfill \emph{2015}\\
+	\textbf{Merit Academic Award}, Faculty of Engineering and IT, USyd \hfill \emph{2015}\\
+	\textbf{Third Prize Scholarship}, East China University of Science and Technology \hfill \emph{2014}\\
+	\textbf{Fei-yang Award}, East China University of Science and Technology \hfill \emph{2014}\\
+	
+	
+	% \smallskip
+	% Shanghai Rong-Guang \textbf{Scholarship} \hfill \emph{2013}\\
+	% \smallskip
+	% Academic \textbf{Scholarship} of Tongji University \hfill \emph{2012--2013}\\
+	% \smallskip
+	% Social Activity \textbf{Scholarship} of Tongji University \hfill \emph{2012--2013}\\
+	% \smallskip
+	% Meritorious Winner in \textbf{Mathematical Contest in Modeling} (MCM) \hfill
+	% \emph{2013}\\
+	% \smallskip
+	% \textbf{National Undergraduate Innovation Program} Certificate  \hfill \emph{2012}\\
+	% \smallskip
+	% Excellent \textbf{Student Cadre} of Tongji University \hfill \emph{2012}\\
+\end{body}
+\smallskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Teaching Positions
+\header{Teaching Experience}
+\begin{body}
+	\vspace{14pt}
+	\textbf{Teaching Assistant} \hfill \emph{March 2015 -- Present}\\
+	Faculty of Engineering and IT, USyd \hfill NSW
+	\vspace{-2pt}
+	\begin{itemize}
+		\setlength{\itemindent}{0in}
+		\setlength{\itemsep}{0in}
+		\item Delivered tutorial and led discussion sessions to reinforce material covered in
+		lectures. Course includes: Fluid Dynamics II (MECH3261), Thermal Engineering II (MECH3260), Advanced Computational Fluid Dynamics (AMME5202)
+	\end{itemize}
+\end{body}
+\smallskip
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Research Experience
+\header{Research Experience}
+\begin{body}
+	\vspace{14pt}
+	
+	\textbf{Advanced Fluid Information Research Center}\hfill
+	\emph{September 2019 -- October 2019} \\
+	Institute of Fluid Science, Tohoku University   \hfill Sendai, Japan
+	\vspace{-2pt}
+	\begin{itemize}
+		\setlength{\itemindent}{0in}
+		\setlength{\itemsep}{0in}
+		\item Set up large scale CFD simulations using Fortran-90 on Japanese supercomputing system 
+		\item Statistical analysis for the data obtained
+	%	\item Achieved highest Grashof number that has been ever reported
+	\end{itemize}
+
+	
+	% \textbf{Analyst Intern}\hfill
+	% \emph{June, 2017 -- January, 2018} \\
+	% After, Inc \hfill Norwalk, CT
+	% \vspace{-2pt}
+	% \begin{itemize}
+	%   \setlength{\itemindent}{0in}
+	%   \setlength{\itemsep}{0in}
+	% \item Statistical modeling for warranty analytics
+	% \item Interactive data visualization with R Shiny
+	% \end{itemize}
+	
+	% \textbf{Analyst Intern}\hfill
+	% \emph{February, 2014 -- July, 2014} \\
+	% Department of Measurement Science (MSci), A.C. Nielsen \hfill Shanghai, China
+	% \vspace{-2pt}
+	% \begin{itemize}
+	%   \setlength{\itemindent}{0in}
+	%   \setlength{\itemsep}{0in}
+	% \item Worked on SAS programing, assisted sample design and universe
+	%   estimation, etc.
+	% \end{itemize}
+\end{body}
+\smallskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Work Experience
+\header{Industry Experience}
+\begin{body}
+	\vspace{14pt}
+	
+	\textbf{Project Engineer}\hfill
+	\emph{November 2015 -- February 2016} \\
+	Department of Research \& Development, Inalfa Co., Ltd.  \hfill Shanghai, China
+	\vspace{-2pt}
+	\begin{itemize}
+		\setlength{\itemindent}{0in}
+		\setlength{\itemsep}{0in}
+		\item Experiment design \& validation
+		\item Statistical analysis for experimental data
+		\item Algorithm development for acoustic analysis programs
+	\end{itemize}
+	
+	
+	\textbf{Assistant Manager}\hfill
+	\emph{June 2014 -- December 2014} \\
+	Department of Construction \& Excavation Machinery, Yanmar Engines Co.,  \hfill Shanghai, China
+	\vspace{-2pt}
+	\begin{itemize}
+		\setlength{\itemindent}{0in}
+		\setlength{\itemsep}{0in}
+		\item Statistical analysis for recurrent event data
+		\item Inventory control
+	\end{itemize}
+	
+	% \textbf{Analyst Intern}\hfill
+	% \emph{June, 2017 -- January, 2018} \\
+	% After, Inc \hfill Norwalk, CT
+	% \vspace{-2pt}
+	% \begin{itemize}
+	%   \setlength{\itemindent}{0in}
+	%   \setlength{\itemsep}{0in}
+	% \item Statistical modeling for warranty analytics
+	% \item Interactive data visualization with R Shiny
+	% \end{itemize}
+	
+	% \textbf{Analyst Intern}\hfill
+	% \emph{February, 2014 -- July, 2014} \\
+	% Department of Measurement Science (MSci), A.C. Nielsen \hfill Shanghai, China
+	% \vspace{-2pt}
+	% \begin{itemize}
+	%   \setlength{\itemindent}{0in}
+	%   \setlength{\itemsep}{0in}
+	% \item Worked on SAS programing, assisted sample design and universe
+	%   estimation, etc.
+	% \end{itemize}
+\end{body}
+\smallskip
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Service
+\header{Service}
+\begin{body}
+	\vspace{14pt}
+	
+	\textbf{Volunteer} of China Open Day (USyd) \hfill
+	\emph{2015}
+	\vspace{-2pt}
+	\begin{itemize}
+		\setlength{\itemindent}{0in}
+		\setlength{\itemsep}{0in}
+		\item Providing assistance on behalf of the faculty of Engineering and IT with the USyd global student recruitment team. 
+	\end{itemize}
+	
+	% \textbf{Journal Referee}\\
+	% Scientific Reports --- Nature \hfill \emph{January 2017 -- Present}\\
+	% \smallskip
+	% \textbf{President} of Student Union \hfill \emph{July 2012 -- June 2013}\\
+	% \textbf{School of Mathematical Sciences} \hfill Tongji University
+	% \vspace{-2pt}
+	% \begin{itemize}
+	%   \setlength{\itemindent}{0in}
+	%   \setlength{\itemsep}{0in}
+	%   \item Organized academic and social events for the school, etc.
+	% \end{itemize}
+\end{body}
+\smallskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Language
+ \header{Language}
+
+ \begin{body}
+   \vspace{14pt}
+   \textbf{English} (fluent), \textbf{Japanese} (fluent), \textbf{Mandarin} (native) and \textbf{Shanghai Dialect} (native) \\
+ \end{body}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Research Positions
+%\header{Research Experience}
+%\begin{body}
+%	\vspace{14pt}
+%	
+%	\textbf{Research Assistant} \hfill \emph{January 2016 -- July 2019}\\
+%	UConn Health Center for Population Health \hfill
+%	Farmington, CT
+%	\vspace{-2pt}
+%	\begin{itemize}
+%		\setlength{\itemindent}{0in}
+%		\setlength{\itemsep}{0in}
+%		\item Data cleaning and data integration of Connecticut All-Payer
+%		Claims Databases (APCD) and Electronic Health Records (EHR) from
+%		Connecticut Children's Medical Center (CCMC)
+%		\item A suicide prevention project by survival analysis using the
+%		APCD and CCMC data
+%		\item Website development and interactive data visualization for
+%		HealthQualityCT scorecard project using Hugo and R Shiny at
+%		\url{https://healthqualityct.org}
+%		\item Usage of imaging procedures for dental treatment over time
+%		\item Comorbidity measures and thirty days' readmission rate of
+%		joint replacement using Hospital Inpatient Discharge Data (HIDD)
+%	\end{itemize}
+%	
+%	\textbf{Graduate Assistant} \hfill \emph{January 2017 -- May 2017}\\
+%	UConn Data Science Lab \hfill Storrs, CT
+%	\vspace{-2pt}
+%	\begin{itemize}
+%		\setlength{\itemindent}{0in}
+%		\setlength{\itemsep}{0in}
+%		\item Set up project templates in R Mardown with HTML widgets and Shiny
+%		Applications
+%		\item Sample projects on survival analysis with deep neural
+%		network model
+%	\end{itemize}
+%	
+%\end{body}
+%\smallskip
+
+
+\end{document}
