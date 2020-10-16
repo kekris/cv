@@ -1,5 +1,5 @@
 \documentclass[letterpaper, 10pt]{article}
-
+%!TeX program = xelatex
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath}
 \usepackage{amssymb}
@@ -8,7 +8,11 @@
 \usepackage{multicol}
 \usepackage{parcolumns}
 \usepackage[strict]{changepage}
-
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{academicons}
+\definecolor{orcidlogocol}{HTML}{A6CE39}
+\newcommand{\orcid}[1]{\href{https://orcid.org/#1}{\textcolor[HTML]{A6CE39}{\aiOrcid}}}
 % \usepackage[left=0.2in, right=0.2in, bottom=1.25in, top=1.25in]{geometry}
 
 \usepackage{setspace}
@@ -97,7 +101,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Name
 \begin{center}
-  {\huge \textbf {Junhao Ke}}
+  {\huge \textbf {Junhao Ke } }\\
+%  { ORCID\orcid{0000-0002-1177-1834}: 0000-0002-1177-1834}
 \end{center}
 
 % \begin{changemargin}{-0.1in}{-0.1in}
@@ -105,6 +110,7 @@
   \colchunk[1]{%
     \begin{adjustwidth}{-0.8in}{}
     \begin{itemize}
+	\item[\orcid{0000-0002-1177-1834}] 0000-0002-1177-1834
 	\item[\Email] \href{mailto:junhao.ke@sydney.edu.au}{junhao.ke@sydney.edu.au}
     \item[\Mobilefone] (+61)~0~451~559~391	
     \item[] Faculty of Engineering and Information Technology
@@ -151,7 +157,7 @@
 
 
 \header{Research Interests}
-Computational Fluid Dynamics, Statistical Computing, Turbulent Data Analysis
+Computational Fluid Dynamics, Statistical Computing, Turbulent Flows, Boundary Layer Theory
 \smallskip
 
 
@@ -161,6 +167,10 @@ Computational Fluid Dynamics, Statistical Computing, Turbulent Data Analysis
 \header{Publications}
 \begin{body}
   \vspace{14pt}
+  
+  \textbf{Ke, J.}, Williamson, N., Armfield, S. W., Norris, S. E., \& Komiya, A.  (2020). Law of the wall for a temporally evolving vertical natural convection boundary layer. \emph{Journal of Fluid Mechanics}, 902, A31.
+  
+  \smallskip
 
   \textbf{Ke, J.}, , Williamson, N., Armfield, S. W., McBain, G. D., \& Norris, S. E. (2019). Stability of a temporally evolving natural convection boundary layer on an isothermal wall. \emph{Journal of Fluid Mechanics}, 877, 1163-1185.
 
@@ -179,9 +189,6 @@ Computational Fluid Dynamics, Statistical Computing, Turbulent Data Analysis
 \begin{body}
   \vspace{14pt}
 
-  \textbf{Ke, J.}, Williamson, N., Armfield, S. W., Norris, S. E., \& Komiya, A.  (2020). Law of the wall for a temporally evolving vertical natural convection boundary layer. \emph{Journal of Fluid Mechanics}. (Under review)
-
-  \smallskip
 
   \textbf{Ke, J.}, Williamson, N., Armfield, S. W., Norris, S. E., \& Komiya, A.  Integral modelling of a temporally developing natural convection boundary layer.
 
@@ -204,7 +211,7 @@ Computational Fluid Dynamics, Statistical Computing, Turbulent Data Analysis
   
   \smallskip
   
-  DNS study of a parallel vertical natural convection boundary layer. In Australia-Japan Fluid Dynamics Workshop, Sydney, Australia, 31 January-1 February 2019.
+  DNS study of a parallel vertical natural convection boundary layer. In Australia-Japan Fluid Dynamics Workshop, Sydney, NSW Australia, 31 January-1 February 2019.
   
   \smallskip
   
@@ -212,11 +219,11 @@ Computational Fluid Dynamics, Statistical Computing, Turbulent Data Analysis
   
   \smallskip
   
-  Application of an integral model to an unsteady natural convection boundary layer. In 11th Australasian Natural Convection Workshop, Sydney, Australia, 9-10 December 2019.
+  Application of an integral model to an unsteady natural convection boundary layer. In 11th Australasian Natural Convection Workshop, Sydney, NSW Australia, 9-10 December 2019.
   
   \smallskip
   
-  
+  Integral modelling of an unsteady natural convection boundary layer. In 22nd Australasian Fluid Mechanics Conference, Brisbane, QLD Australia, 7-10 December 2020.
 
 \end{body}
 \smallskip
